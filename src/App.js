@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='title'>Image compressor</h1>
+      <h1 className='title'>Image Resizer</h1>
       <input className='input-box' name="file" type="file" id="file" onChange={(e) => onChange(e)} />
       {
         compressedFile ?

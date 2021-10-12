@@ -3,6 +3,7 @@ import './App.css';
 import Compress from "browser-image-compression";
 import { useState } from 'react';
 import { saveAs } from 'file-saver'
+import SideAd from './PushAd';
 
 function App() {
 
@@ -49,6 +50,8 @@ function App() {
           </div>
           : null
       }
+
+      <SideAd />
 
     </div>
   );

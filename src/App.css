@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(19, 18, 18);
 }
 
 .App-link {
@@ -37,40 +37,58 @@
   }
 }
 
-body{
-  background-color: #444955;
+body {
+  background-color: #f5f5f5;
 }
-.title{
-color: aliceblue;
-}
-
-.download-btn
-{
-background-color: rgb(56, 123, 56);
-color: white;
-font-size: large;
-font-weight: 600;
-border-radius: 0.5rem;
-height: 4rem;
-width: 8rem;
-border-style: solid;
-border-width: 0ch;
+.title {
+  color: rgb(67, 67, 67);
 }
 
-.download-btn:hover{
+.download-btn {
+  background-color: rgb(56, 123, 56);
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  height: 4rem;
+  width: 8rem;
+  border-style: solid;
+  border-width: 0ch;
+}
+
+.download-btn:hover {
   border-color: #24b364;
   border-width: 0.2rem;
   background-color: white;
   color: rgb(8, 118, 8);
 }
 
-.comrpessed-size{
-font-size: large;
-font-weight: 500;
-color: aliceblue;
+.select-btn {
+  background-color: rgb(56, 58, 123);
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 6rem;
+  border-style: solid;
+  border-width: 0ch;
+  margin: 1rem;
 }
 
-.input-box{
+.select-btn:hover {
+  border-color: rgb(56, 58, 123);
+  border-width: 0.2rem;
+  background-color: white;
+  color: rgb(56, 58, 123);
+}
+.comrpessed-size {
+  font-size: large;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+.input-box {
   color: aliceblue;
   background-color: rgb(31, 134, 213);
   padding: 0.5rem;

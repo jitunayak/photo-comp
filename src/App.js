@@ -3,7 +3,7 @@ import Compress from "browser-image-compression";
 import { useState } from "react";
 import { saveAs } from "file-saver";
 import SideAd from "./PushAd";
-
+import fileDownload from "js-file-download";
 function App() {
   const [compressedFile, setCompressedFile] = useState(null);
 
@@ -11,8 +11,10 @@ function App() {
 
   function downloadImage() {
     try {
-      compressImage ? saveAs(compressedFile, "image.jpg") : alert("Try again"); // Put your image url here.
-      //setCompressedFile(null);
+      // compressImage ? saveAs(compressedFile, "image.jpeg") : alert("Try again");
+      // Put your image url here.
+      // //setCompressedFile(null);
+      fileDownload(compressedFile, "image.jpeg");
     } catch (err) {
       console.log(err);
     }
@@ -22,10 +24,6 @@ function App() {
     setCompressedFile(null);
     setFile(e.target.files[0]);
     console.log("user uplaod", { file });
-    // const options = {
-    //   maxWidthOrHeight: 200,
-    //   useWebWorker: true,
-    // };
   };
 
   async function compressImage(maxSizeMB, width) {

@@ -9,7 +9,7 @@ function App() {
 
   const [file, setFile] = useState(null);
 
-  async function downloadImage() {
+  function downloadImage() {
     try {
       compressImage ? saveAs(compressedFile, "image.jpg") : alert("Try again"); // Put your image url here.
       //setCompressedFile(null);

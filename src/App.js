@@ -7,15 +7,20 @@ import SideAd from "./PushAd";
 function App() {
   const [compressedFile, setCompressedFile] = useState(null);
 
-  const downloadImage = async () => {
-    saveAs(compressedFile, "image.jpg"); // Put your image url here.
-    setCompressedFile(null);
-  };
+  const [file, setFile] = useState(null);
 
-  let file = null;
+  async function downloadImage() {
+    try {
+      compressImage ? saveAs(compressedFile, "image.jpg") : alert("Try again"); // Put your image url here.
+      //setCompressedFile(null);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   const onChange = async (e) => {
     setCompressedFile(null);
-    file = e.target.files[0];
+    setFile(e.target.files[0]);
     console.log("user uplaod", { file });
     // const options = {
     //   maxWidthOrHeight: 200,
@@ -24,15 +29,20 @@ function App() {
   };
 
   async function compressImage(maxSizeMB, width) {
-    Compress(file, { maxWidthOrHeight: width, maxSizeMB, useWebWorker: true })
+    const tempFile = file;
+    Compress(tempFile, {
+      maxWidthOrHeight: width,
+      maxSizeMB,
+      useWebWorker: true,
+    })
       .then((compressedBlob) => {
         console.log(compressedBlob);
         compressedBlob.lastModifiedDate = new Date();
-        const convertedBlobFile = new File([compressedBlob], file.name, {
-          type: file.type,
+        const convertedBlobFile = new File([compressedBlob], tempFile.name, {
+          type: tempFile.type,
           lastModified: Date.now(),
         });
-        console.log(convertedBlobFile.size);
+        console.log(convertedBlobFile.size / 1024);
         setCompressedFile(convertedBlobFile);
         // Here you are free to call any method you are gonna use to upload your file example uploadToCloudinaryUsingPreset(convertedBlobFile)
       })
@@ -55,10 +65,11 @@ function App() {
       />
 
       <div>
-        {/* <div className="comrpessed-size">
-          {" "}
-          New compressed size is {Math.floor(compressedFile.size / 1024)} KB
-        </div> */}
+        {compressedFile && (
+          <div className="comrpessed-size">
+            New compressed size is {Math.floor(compressedFile.size / 1024)} KB
+          </div>
+        )}
 
         <button
           className="select-btn"
@@ -72,7 +83,7 @@ function App() {
         <button
           className="select-btn"
           onClick={async () => {
-            await compressImage(0.05, 500);
+            await compressImage(0.05, 800);
             //selectImage();
           }}
         >

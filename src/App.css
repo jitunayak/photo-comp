@@ -85,7 +85,8 @@ body {
 .comrpessed-size {
   font-size: large;
   font-weight: 500;
-  color: aliceblue;
+  color: rgb(39, 39, 40);
+  margin: 1rem;
 }
 
 .input-box {

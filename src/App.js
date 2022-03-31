@@ -4,7 +4,6 @@ import { useState } from "react";
 // import { saveAs } from "file-saver";
 // import SideAd from "./PushAd";
 import fileDownload from "js-file-download";
-import download from "./direct-download.png";
 
 function App() {
   const [compressedFile, setCompressedFile] = useState(null);

@@ -53,7 +53,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Image Resizer</h1>
+      <h1 className="title">Image Compressor</h1>
+      <p className="description">
+        Upload your photo. Choose the desired file size. Compress and download
+        it locally
+      </p>
       <input
         className="input-box"
         name="file"
@@ -130,6 +134,9 @@ function App() {
         >
           download
         </button>
+      </div>
+      <div className="visitor-counter">
+        <div class="elfsight-app-a134bdf7-4307-4ee9-99d0-1c2c114c3234"></div>
       </div>
     </div>
   );

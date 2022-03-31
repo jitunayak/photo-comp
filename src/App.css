@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,7 +26,7 @@ body {
 }
 
 .download-btn {
-  background-color: rgb(56, 123, 56);
+  background-color: rgb(82, 178, 82);
   color: white;
   font-size: large;
   font-weight: 600;
@@ -49,17 +38,17 @@ body {
 }
 
 .download-btn:hover {
-  border-color: #24b364;
+  border-color: rgb(82, 178, 82);
   border-width: 0.2rem;
   background-color: white;
-  color: rgb(8, 118, 8);
+  color: rgb(82, 178, 82);
 }
 
 .select-btn {
   background-color: rgb(186, 188, 243);
   color: rgb(56, 58, 123);
   font-size: large;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 0.2rem;
   height: 6rem;
   width: 6rem;
@@ -70,7 +59,7 @@ body {
 
 .select-btn:hover {
   border-color: rgb(56, 58, 123);
-  border-width: 0.2rem;
+  border-width: 0.1rem;
   background-color: white;
   color: rgb(56, 58, 123);
 }
@@ -83,10 +72,9 @@ body {
 
 .input-box {
   color: aliceblue;
-  background-color: rgb(31, 134, 213);
+  background-color: rgb(18, 55, 83);
   padding: 2rem;
-  font-family: sans-serif;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   cursor: pointer;
   margin-top: 1rem;
   font-size: large;
@@ -102,3 +90,4 @@ body {
 
   margin: 10rem;
 }
+

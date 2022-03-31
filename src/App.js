@@ -4,6 +4,8 @@ import { useState } from "react";
 // import { saveAs } from "file-saver";
 // import SideAd from "./PushAd";
 import fileDownload from "js-file-download";
+import download from "./direct-download.png";
+
 function App() {
   const [compressedFile, setCompressedFile] = useState(null);
 
@@ -132,7 +134,13 @@ function App() {
             downloadImage();
           }}
         >
-          download
+          {/* <img
+            width={30}
+            style={{ padding: 10 }}
+            src={download}
+            alt="download icon"
+          /> */}
+          Download
         </button>
       </div>
       <div className="visitor-counter">

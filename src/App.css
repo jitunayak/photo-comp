@@ -90,3 +90,9 @@ body {
   margin: 6rem;
 }
 
+.size-container{
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-shrink: inherit;
+}

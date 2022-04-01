@@ -73,59 +73,61 @@ function App() {
             New compressed size is {Math.floor(compressedFile.size / 1024)} KB
           </div>
         )}
+        <div className="size-container">
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(0.02, 200);
+              //selectImage();
+            }}
+          >
+            20 KB
+          </button>
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(0.05, 800);
+              //selectImage();
+            }}
+          >
+            50 KB
+          </button>
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(0.09, 1000);
+              //selectImage();
+            }}
+          >
+            100 KB
+          </button>
 
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(0.02, 200);
-            //selectImage();
-          }}
-        >
-          20 KB
-        </button>
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(0.05, 800);
-            //selectImage();
-          }}
-        >
-          50 KB
-        </button>
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(0.09, 1000);
-            //selectImage();
-          }}
-        >
-          100 KB
-        </button>
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(0.2, 1500);
+            }}
+          >
+            200 KB
+          </button>
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(0.5, 2000);
+            }}
+          >
+            500 KB
+          </button>
+          <button
+            className="select-btn"
+            onClick={async () => {
+              await compressImage(1, 4000);
+            }}
+          >
+            1 MB
+          </button>
+        </div>
 
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(0.2, 1500);
-          }}
-        >
-          200 KB
-        </button>
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(0.5, 2000);
-          }}
-        >
-          500 KB
-        </button>
-        <button
-          className="select-btn"
-          onClick={async () => {
-            await compressImage(1, 4000);
-          }}
-        >
-          1 MB
-        </button>
         <br></br>
         <button
           className="download-btn"
